@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">New Registration Login Page</h1>
+<form action="/registeration/" method="post">
+    {% csrf_token %}
+<table align="center"  border="2" bgcolor="#6495ed">
+    <tr align="center">
+        <td>
+            <input type="text" placeholder="First Name" required name="t1">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="text" placeholder="Last Name" required name="t2">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="text" placeholder="SurName" required name="t3">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="text" placeholder="Father Name" required name="t4">
+        </td>
+    </tr>
+
+    <tr align="center">
+        <td>
+            <input type="number" placeholder="Contact Number" required name="t5">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="email" placeholder="Email Id" required name="t6">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="text" placeholder="User Name" required name="t7">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <input type="password" placeholder="Password" required name="t8">
+        </td>
+    </tr>
+     <tr align="center">
+      <td>Address
+            <textarea name="address"></textarea>
+        </td>
+      </tr>
+
+    <tr align="center">
+        <td>
+            <input type="submit" value="Login">
+            <input type="submit" value="cancel">
+        </td>
+    </tr>
+    <tr align="center">
+        <td>{{ reg }}</td>
+    </tr>
+    <td>
+     {% load staticfiles %}
+     <img src="{% static 'VIZAG_RAILWAY_STATION.jpg' %}" width="700" height="200">
+  </td>
+</table>
+    </form>
+ <form action="/tickestsbooking/" method="post">
+    {% csrf_token %}
+</form>
+<form action="/ladies/" method="post">
+    {% csrf_token %}
+</form>
+<br>
+</body>
+</html>

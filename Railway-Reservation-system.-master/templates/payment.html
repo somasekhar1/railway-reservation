@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Payment Details</h1>
+<form action="/payment/" method="post">
+    {% csrf_token %}
+    <table align="center" bgcolor="aqua" border="2">
+    <tr>
+        <td>
+            <select name="cardtype">
+                <option>Select</option>
+                <option>Credit card</option>
+                <option>Dedit card</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="bankname">
+                <option>Select</option>
+                <option>Axis Bank</option>
+                <option>ICICi Bank</option>
+                <option>HDFC Bank</option>
+                <option>Bank of Baroda Bank</option>
+                <option>Vijay Bank</option>
+                <option>Lakshmi vilas Bank</option>
+                <option>Andhra Bank</option>
+                <option>SBI Bank</option>
+                <option>KYG Bank</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" placeholder="Card Holder Name" required name="t1">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" placeholder="Card Number" required name="t2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" placeholder="Cvv No" min="3" max="" required name="t3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="sign in">
+        </td>
+    </tr>
+    <tr>
+        <td>{{ pay }}</td>
+    </tr>
+</table>
+    </form>
+<table align="center" border="0" bgcolor="#f4a460">
+    <tr>
+        <td>
+{% load staticfiles %}
+<img src="{% static 'stock-vector-people-at-train-station-illustration-410492098.jpg' %}" width="900" height="250">
+</td>
+    </tr>
+</table>
+</body>
+</html>

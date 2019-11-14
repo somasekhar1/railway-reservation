@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Reservation Type</h1>
+<form action="/searchtrain/" method="post">
+    {% csrf_token %}
+<table align="center" bgcolor="#6495ed" border="0">
+      <tr>
+          <td>Select one whatever you want</td>
+      </tr>
+
+    </table>
+    </form>
+    <br>
+    <form action="/generalreservation/" method="post">
+            {% csrf_token %}
+        <table align="center" bgcolor="#6495ed" border="0">
+            <tr>
+            <td>
+                <input type="submit" value="General">
+             </td>
+            </tr>
+
+        </table>
+    </form>
+      <br>
+
+     <form action="/ladies/" method="post">
+            {% csrf_token %}
+         <table align="center" bgcolor="#6495ed" border="0">
+              <tr>
+              <td>
+                  <input type="submit" value="Ladies">
+              </td>
+            </tr>
+         </table>
+     </form>
+       <br>
+      <form action="/tatkal/" method="post">
+            {% csrf_token %}
+          <table align="center" bgcolor="#663399" border="0">
+            <tr>
+                <td>
+                   <input type="submit" value="Tatkal">
+                </td>
+            </tr>
+              </table>
+      </form>
+        <br>
+       <form action="/lowerberth/" method="post">
+            {% csrf_token %}
+           <table align="center" border="0" bgcolor="#87ceeb">
+            <tr>
+                <td>
+                    <input type="submit" value="Lower - berth">
+                </td>
+            </tr>
+               </table>
+       </form>
+        <br>
+        <form action="/srcitizen/" method="post">
+            {% csrf_token %}
+            <table align="center" bgcolor="#ff6347" border="0">
+            <tr>
+                <td>
+                   <input type="submit" value="sr.citizen">
+                </td>
+            </tr>
+                </table>
+        </form>
+          <br>
+         <form action="/permiumtatkal/" method="post">
+            {% csrf_token %}
+             <table align="center" bgcolor="#ff6347" border="0">
+            <tr>
+                 <td>
+                    <input type="submit" value="Premium Tatkal">
+                 </td>
+             </tr>
+                 </table>
+         </form>
+
+</body>
+</html>

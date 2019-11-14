@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Tickets Booking Form</h1>
+<form action="/tickestsbooking/" method="post">
+    {% csrf_token %}
+    <table align="center" bgcolor="#6495ed" border="2">
+        <tr>
+            <td>From Place
+                <select name="fromplace">
+                    <option>Select</option>
+                    <option>Vijayawada</option>
+                    <option>Hyderabad</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Vizag</option>
+                    <option>Guntur</option>
+                    <option>Goa</option>
+                    <option>Kerala</option>
+                    <option>Delhi</option>
+                    <option>Patna</option>
+                    <option>New Delhi</option>
+                    <option>Mumbai</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>To Place
+                <select name="toplace">
+                    <option>Select</option>
+                    <option>Vijayawada</option>
+                    <option>Hyderabad</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Vizag</option>
+                    <option>Guntur</option>
+                    <option>Goa</option>
+                    <option>Kerala</option>
+                    <option>Delhi</option>
+                    <option>Patna</option>
+                    <option>New Delhi</option>
+                    <option>Mumbai</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Select Today Date
+                <input type="date" placeholder="Date" min="2018-10-30" max="" required name="t1">
+            </td>
+        </tr>
+        <tr>
+            <td>Journey Date
+                <input type="date" placeholder="Journey Date" min="2018-10-30" max="" required name="t2">
+            </td>
+        </tr>
+        <tr>
+        <td>{{ tickect }}</td>
+    </tr>
+
+</table>
+    </form>
+
+<form action="/searchtrain/" method="post">
+    {% csrf_token %}
+    <table align="center" border="0" bgcolor="#ff7f50">
+    <tr>
+            <td>
+                <input type="submit" value="Search Train" >
+            </td>
+        </tr>
+        </table>
+   </form>
+<br>
+<table align="center" border="0" bgcolor="#deb887">
+    <tr>
+        <td>
+          {% load staticfiles %}
+           <img src="{% static 'train-station.jpg' %}" width="1200" height="300">
+        </td>
+    </tr>
+    </table>
+</body>
+</html>

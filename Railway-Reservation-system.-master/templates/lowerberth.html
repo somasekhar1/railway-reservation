@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Lower Berth Ticket Details View Form</h1>
+<form action="/searchseatsavailabilty/" method="post">
+    {% csrf_token %}
+    <table align="center" border="0" bgcolor="HighlightText">
+        <tr>
+            <td>Select a train</td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Chennai Express" required name="t10">Chennai Express
+            </td>
+        </tr>
+     <tr>
+            <td>
+               <input type="radio" placeholder="Hyderabad Express" required name="t10">Hyderabad Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Patna Express" required name="t10">Patna Express
+            </td>
+        </tr><tr>
+            <td>
+               <input type="radio" placeholder="Mumbai Express" required name="t10">Mumbai Express
+            </td>
+        </tr><tr>
+            <td>
+               <input type="radio" placeholder="Pune Express" required name="t10">Pune Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Vijayawada Express" required name="t10">Vijayawada Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Kerala Express" required name="t10">Kerala Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Delhi Express" required name="t10">Delhi Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Garibrath Express" required name="t10">Garibrath Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Goa Express" required name="t10">Goa Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="radio" placeholder="Bangalore Express" required name="t10">Bangalore Express
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="number" placeholder="Enter No of Tickets" required name="t10">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" value="search seats Availabilty">
+            </td>
+        </tr>
+    </table>
+</form>
+<table align="center" border="0" bgcolor="#f4a460">
+    <tr>
+        <td>
+{% load staticfiles %}
+<img src="{% static 'TAMBARAM1.jpg' %}" width="900" height="250">
+</td>
+    </tr>
+</table>
+
+</body>
+</html>

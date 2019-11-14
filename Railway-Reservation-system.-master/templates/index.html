@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Railway Reservation System</h1>
+<table align="center" border="0">
+   <td>
+     {% load staticfiles %}
+     <img src="{% static 'most-clean-railways-stations-in-ndia.jpg' %}" width="500" height="200">
+  </td>
+    <td>
+{% load staticfiles %}
+<img src="{% static 'DE286581_942long.jpg' %}" width="500" height="200">
+    </td>
+
+</table>
+
+
+    <form action="/register/" method="post">
+        {% csrf_token %}
+        <table align="center" border="0" bgcolor="#7fff00">
+
+             <td>
+            <input type="submit" value="New Registration Page">
+            </td>
+        </table>
+    </form>&nbsp;
+     <h1 align="center"></h1>
+           <form action="/alreadyaccountexist/" method="post">
+               {% csrf_token %}
+              <table align="center" border="0" bgcolor="#7fff00">
+             <td>
+            <input type="submit" value="Already Account Exist">
+        </td>
+              </table>
+           </form>
+         <br>
+<marquee direction="left-right" bgcolor="orange">Welcome To Railway Reservation Booking Tickets Book and Enjoy The Journey</marquee>
+
+</body>
+</html>
